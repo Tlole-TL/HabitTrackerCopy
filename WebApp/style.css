@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%; /* Make sure the body takes the full height */
+}
+
+/* Header Styles */
+#header {
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2; /* Ensure header stays above the background */
+}
+
+/* Logo Styling */
+.logo {
+  position: relative; /* Make logo part of the navbar */
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 3; /* Ensure the logo stays on top of the navbar */
+  transition: opacity 0.3s ease; /* Smooth transition for logo visibility */
+}
+
+/* Background Styling */
+.background {
+  position: fixed; /* Keep the background in place when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the background image covers the entire screen */
+  z-index: -1; /* Keep the background behind all other elements */
+  background-image: url('img/background.jpg'); /* Replace with your actual image path */
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+/* Navbar Styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px; /* Start with a narrow width for the collapsed navbar */
+  background-color: rgba(0, 0, 0, 0.935); /* Semi-transparent black */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  justify-content: flex-start;
+  padding-top: 20px; /* Space at the top */
+  transition: width 0.3s ease; /* Smooth transition for expanding */
+  z-index: 2; /* Ensure navbar stays above the background */
+  overflow: hidden; /* Prevent overflow when collapsed */
+}
+
+/* Navbar Links */
+#navbar li {
+  list-style: none;
+  margin: 10px 0; /* Space between items */
+  text-align: center;
+  opacity: 0; /* Initially hide the links */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* Navbar Links - Hover Effect */
+#navbar:hover li {
+  opacity: 1; /* Show the links when hovering over the navbar */
+}
+
+/* Navbar Links (Visible when expanded) */
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  padding: 10px 15px;
+  text-align: left; /* Align text to the left */
+}
+
+/* Active Navbar Link */
+#navbar a.active {
+  color: #FFD700; /* Gold color for active link */
+}
+
+/* Expand Navbar on Hover */
+#navbar:hover {
+  width: 200px; /* Expand the navbar */
+}
+
+/* Make Navbar Items Visible on Hover */
+#navbar:hover li {
+  opacity: 1; /* Show items when hovering over the navbar */
+}
+
+/* Show the entire navbar when hovering over the logo */
+#navbar:hover .logo {
+  opacity: 1; /* Ensure logo stays visible */
+}
+
+/* Keep the logo visible on hover (even when expanded) */
+#navbar:hover .logo {
+  opacity: 1;
+}
+
+#home-link {
+  background-color: #FFD700; /* Gold color for home link */
+  color: black; /* Black text for home link */
+  font-weight: bold; /* Bold text for home link */
+  padding: 10px 800px 10px; /* Add padding for home link */
+}
+
+#goal-list-left {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+#input {
+  width: 45%;
+  float: right;
+  padding: 100px;
+  margin-top: -500px;
+}
+
+#input > div {
+  margin-bottom: 20px;
+}
+
+#input h3 {
+  margin-top: 0;
+}
+
+#goal-form input, #goal-form select, #goal-form button,
+#goal-form-2 input, #goal-form-2 select, #goal-form-2 button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#goal-form button, #goal-form-2 button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.goal-category {
+  margin-bottom: 20px;
+}
+
+.goal-category h2 {
+  margin-top: 0;
+}
+
